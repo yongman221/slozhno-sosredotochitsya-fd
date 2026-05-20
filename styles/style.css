@@ -129,3 +129,26 @@
   height: 9px;
   box-shadow: 0px 0px 4px 2px var(--accent-color);
 }
+
+.main__content {
+  display: grid;
+  grid-template-rows: (auto-fit, 1fr);
+  gap: 20px;
+  padding: 0px 10px 0px 10px;
+}
+
+.main__content:first-child {
+  margin-top: 40px;
+}
+
+.main__content:not(:first-child) {
+  margin-top: 50px;
+}
+
+.main__content-title {
+  font-family: 'IBM Plex Mono';
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23.4px;
+  color: var(--color-section-heading);
+}
