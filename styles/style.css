@@ -2,4 +2,130 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-image: var(--main-bg-img);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: var(--main-bg-color);
+}
+
+.header {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding: 74px 10px 66px 10px;
+  gap: 55px;
+  height: 100vh;
+  min-height: 668px;
+}
+
+.header__theme-menu {
+  justify-self: end;
+  grid-row: 1/2;
+}
+
+.header__theme-menu-list {
+  padding-right: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  user-select: none;
+  cursor: pointer;
+  appearance: none;
+  font-family: 'IBM Plex mono';
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 18px;
+  color: var(--color-menu);
+  text-transform: lowercase;
+  background-color: transparent;
+  border: none;
+  padding: 4px 13px;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--color-menu);
+}
+
+.header__theme-menu-button:not(.header__theme-menu-button_active):hover {
+  outline: 1px solid rgba(255, 0, 112, 0.4);
+}
+
+.header__theme-menu-button:not(.header__theme-menu-button_active):focus {
+  outline: none;
+  border-bottom: 1px solid var(--color-menu);
+}
+
+.header__title {
+  user-select: none;
+  font-family: 'IBM Plex mono';
+  font-weight: bold;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  text-transform: lowercase;
+  color: var(--color-primary-heading);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  line-height: 83%;
+  justify-self: start;
+  grid-row: 2/3;
+}
+
+.header__text {
+  user-select: none;
+  font-family: 'IBM Plex mono';
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
+  justify-self: start;
+  grid-row: 3/4;
+  background-color: var(--title-decor);
+  color: var(--color-secondary-heading);
+}
+
+.corner {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+}
+
+.corner.right-top-corner {
+  top: 10px;
+  right: 10px;
+  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--accent-color);
+}
+
+.corner.left-bottom-corner {
+  bottom: 10px;
+  left: 10px;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+}
+
+.header__rec-label {
+  user-select: none;
+  position: absolute;
+  font-family: 'IBM Plex Mono';
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  top: 10px;
+  right: 19px;
+}
+
+.header__rec-label::after {
+  content: '';
+  display: inline-block;
+  margin-left: 10px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  width: 9px;
+  height: 9px;
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
 }
