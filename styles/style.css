@@ -147,8 +147,35 @@
 
 .main__content-title {
   font-family: 'IBM Plex Mono';
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
   color: var(--color-section-heading);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card__title {
+  font-family: 'IBM Plex Mono';
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
+  color: var(--color-secondary-heading);
+  background-color: var(--accent-color);
+}
+
+.card__title-normal {
+  font-weight: 400;
+}
+
+.card__text {
+  font-family: 'IBM Plex Mono';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23.4px;
+  color: var(--color-card-text);
 }
