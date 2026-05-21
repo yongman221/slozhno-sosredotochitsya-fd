@@ -74,7 +74,10 @@
   grid-row: 2/3;
 }
 
+
+
 .header__text {
+  display: inline;
   user-select: none;
   font-family: 'IBM Plex mono';
   font-weight: 700;
@@ -182,7 +185,7 @@
 
 .gallery {
   display: grid;
-  grid-template-rows: 1fr;
+
   grid-template-rows: repeat(auto-fit, 1fr);
   gap: 10px;
   margin-bottom: 40px;
@@ -243,4 +246,55 @@
   color: var(--color-primary-heading);
   text-shadow: 2px 2px 0 var(--accent-color);
   line-height: 83%;
+}
+
+@media (min-width: 768px) {
+  .header {
+    height: 100vh;
+    min-height: 1024px;
+    gap: 30px;
+    padding: 192px 20px 66px 0px;
+  }
+
+  .header__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header__text {
+    justify-self: end;
+    align-self: start;
+    margin-inline-start: 384px;
+    padding-left: ;
+  }
+
+  .corner.right-top-corner {
+    top: 20px;
+    right: 20px;
+  }
+
+  .corner.left-bottom-corner {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .header__rec-label {
+    top: 20px;
+    right: 30px;
+  }
+
+  .main__content {
+    padding: 0px 20px 0px 20px;
+  }
+
+  .main__content:first-child {
+    margin-top: 60px;
+  }
+
+  .main__content-hard-focus {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .main__content-hard-focus>.card {
+    grid-column: 2;
+  }
 }
