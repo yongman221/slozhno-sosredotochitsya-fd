@@ -49,6 +49,7 @@
 }
 
 .header__theme-menu-button_active {
+  pointer-events: none;
   outline: 1px solid var(--color-menu);
 }
 
@@ -191,6 +192,20 @@
   font-size: 18px;
   line-height: 23.4px;
   color: var(--color-card-text);
+}
+
+.card__text-link {
+  appearance: none;
+  text-decoration: none;
+  text-shadow: 1px 1px 0px var(--accent-color);
+}
+
+.card__text-link:hover {
+  text-decoration: underline;
+}
+
+.card__text-link:focus {
+  outline: 1px solid var(--color-card-text);
 }
 
 .gallery {
@@ -393,8 +408,4 @@
     grid-column: auto;
   }
 
-}
-
-.header__theme-menu-button_active {
-  pointer-events: none;
 }
