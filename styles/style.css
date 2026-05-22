@@ -37,7 +37,7 @@
   user-select: none;
   cursor: pointer;
   appearance: none;
-  font-family: 'IBM Plex mono';
+  font-family: 'IBM Plex mono', 'Courier New', Courier, monospace;
   font-weight: normal;
   font-size: 18px;
   line-height: 18px;
@@ -54,7 +54,7 @@
 }
 
 .header__theme-menu-button:not(.header__theme-menu-button_active):hover {
-  outline: 1px solid rgba(255, 0, 112, 0.4);
+  outline: 1px solid color-mix(in srgb, var(--color-menu) 40%, transparent);
 }
 
 .header__theme-menu-button:not(.header__theme-menu-button_active):focus {
@@ -64,7 +64,7 @@
 
 .header__title {
   user-select: none;
-  font-family: 'IBM Plex mono';
+  font-family: 'IBM Plex mono', 'Courier New', Courier, monospace;
   font-weight: bold;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   text-transform: lowercase;
@@ -78,16 +78,17 @@
 
 
 .header__text {
-  display: inline;
+  align-self: start;
+  ;
   user-select: none;
-  font-family: 'IBM Plex mono';
+  font-family: 'IBM Plex mono', 'Courier New', Courier, monospace;
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
   justify-self: start;
   grid-row: 3/4;
   background-color: var(--title-decor);
-  color: var(--color-secondary-heading);
+  color: var(--color-card-heading);
 }
 
 .corner {
@@ -113,7 +114,7 @@
 .header__rec-label {
   user-select: none;
   position: absolute;
-  font-family: 'IBM Plex Mono';
+  font-family: 'IBM Plex Mono', 'Courier New', Courier, monospace;
   font-weight: normal;
   font-size: 18px;
   line-height: 25px;
@@ -156,7 +157,7 @@
 }
 
 .main__content-title {
-  font-family: 'IBM Plex Mono';
+  font-family: 'IBM Plex Mono', 'Courier New', Courier, monospace;
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
@@ -170,11 +171,11 @@
 }
 
 .card__title {
-  font-family: 'IBM Plex Mono';
+  font-family: 'IBM Plex Mono', 'Courier New', Courier, monospace;
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
-  color: var(--color-secondary-heading);
+  color: var(--color-card-heading);
   background-color: var(--accent-color);
 }
 
@@ -187,7 +188,7 @@
 }
 
 .card__text {
-  font-family: 'IBM Plex Mono';
+  font-family: 'IBM Plex Mono', 'Courier New', Courier, monospace;
   font-weight: 400;
   font-size: 18px;
   line-height: 23.4px;
@@ -201,7 +202,7 @@
 }
 
 .card__text-link:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid var(--color-card-text);
 }
 
 .card__text-link:focus {
@@ -215,11 +216,11 @@
 }
 
 .gallery__title {
-  font-family: 'IBM Plex Mono';
+  font-family: 'IBM Plex Mono', 'Courier New', Courier, monospace;
   font-weight: 700;
   font-size: 18px;
   line-height: 23.4px;
-  color: var(--color-secondary-heading);
+  color: var(--color-card-heading);
   grid-column: 1/-1;
   background-color: var(--title-decor);
 
@@ -243,7 +244,7 @@
 
 .footer__text {
   user-select: none;
-  font-family: 'IBM Plex mono';
+  font-family: 'IBM Plex mono', 'Courier New', Courier, monospace;
   font-weight: bold;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   text-transform: lowercase;
@@ -297,11 +298,11 @@
     margin-top: 60px;
   }
 
-  .main__content-hard-focus {
+  .content-section {
     grid-template-columns: 1fr 2fr;
   }
 
-  .main__content-hard-focus>.card {
+  .content-section>.card {
     grid-column: 2;
   }
 
@@ -318,18 +319,10 @@
     grid-column: span 2;
   }
 
-  .main__content-recommendations {
-    grid-template-columns: 1fr 2fr;
-  }
-
-  .main__content-recommendations>.card {
-    grid-column: 2;
-  }
-
   .gallery {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
   }
 
   .gallery__title {
@@ -395,11 +388,20 @@
     margin-inline-start: 513px;
   }
 
+  .main__content-title {
+    margin: 0px;
+  }
+
+  .content-section>.card {
+    margin-left: -5px;
+  }
+
   .main__content-concentration {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
   }
 
   .main__content-concentration>.main__content-title {
+    grid-row: 1;
     grid-column: 1;
   }
 

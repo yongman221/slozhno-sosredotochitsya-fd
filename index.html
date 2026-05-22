@@ -8,19 +8,19 @@
     <title>Сложно сосредоточиться</title>
     <script src="./scripts/script.js"></script>
     <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/dark.css" />
     <link rel="stylesheet" href="./styles/light.css" />
-    <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="icon" href="./images/favicon.ico" sizes="any" />
     <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="./images/mobile-icon.png" />
   </head>
   <body class="page">
     <header class="header decorated-zone">
-      <span class="corner right-top-corner"></span>
-      <span class="corner left-bottom-corner"></span>
+      <div class="corner right-top-corner"></div>
+      <div class="corner left-bottom-corner"></div>
       <span class="header__rec-label" aria-hidden="true">REC</span>
       <nav class="header__theme-menu">
         <ul class="header__theme-menu-list">
@@ -55,7 +55,7 @@
       </p>
     </header>
     <main class="main">
-      <section class="main__content main__content-hard-focus">
+      <section class="main__content content-section">
         <h2 class="main__content-title">Почему сосредоточиться так сложно</h2>
         <article class="card">
           <h3 class="card__title">Многозадачность</h3>
@@ -64,11 +64,16 @@
             важные. Где же легендарная многозадачность, когда она так нужна вам
             (и всем нанимающим менеджерам этого мира)? А дело в том, что её
             просто не существует. Исследователи
-            <a href="/" class="card__text-link">выяснили</a>, что мозгу тяжело
-            концентрироваться даже на двух делах одновременно. А когда в поле
-            внимания попадает несколько важных задач, организм паникует и
-            выделяет кортизол и адреналин — «гормоны стресса». Из-за этого мы
-            работаем невнимательно: ошибаемся и быстро устаём.
+            <a
+              href="https://dana.org/article/multicosts-of-multitasking/"
+              target="_blank"
+              class="card__text-link"
+              >выяснили</a
+            >, что мозгу тяжело концентрироваться даже на двух делах
+            одновременно. А когда в поле внимания попадает несколько важных
+            задач, организм паникует и выделяет кортизол и адреналин — «гормоны
+            стресса». Из-за этого мы работаем невнимательно: ошибаемся и быстро
+            устаём.
           </p>
         </article>
         <article class="card">
@@ -122,7 +127,7 @@
           </p>
         </article>
       </section>
-      <section class="main__content main__content-recommendations">
+      <section class="main__content content-section">
         <h2 class="main__content-title">
           Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх
           секунд)
@@ -131,9 +136,9 @@
           <h3 class="card__title">
             5 простых (на самом деле не очень) советов
           </h3>
-          <h3 class="card__title card__title-normal">
+          <h4 class="card__title card__title-normal">
             Представьте небо и облака
-          </h3>
+          </h4>
           <p class="card__text">
             Или листья в ручье. Тут дело в лёгкой медитации, которая помогает
             успокоиться. Ведь часто именно тревожные мысли о сложных задачах как
@@ -146,7 +151,7 @@
           </p>
         </article>
         <article class="card">
-          <h3 class="card__title card__title-normal">Включите музыку</h3>
+          <h4 class="card__title card__title-normal">Включите музыку</h4>
           <p class="card__text">
             Но не любую, и не любимую. Любимая может быть связана с сильными
             положительными эмоциями, которые тоже очень сильно отвлекают.
@@ -155,19 +160,23 @@
           </p>
         </article>
         <article class="card">
-          <h3 class="card__title card__title-normal">Прогуляйтесь</h3>
+          <h4 class="card__title card__title-normal">Прогуляйтесь</h4>
           <p class="card__text">
             Или даже пробегитесь. Лучше найти парк или лес: один эксперимент
-            <a href="/" class="card__text-link">показал</a>, что созерцание
-            природы повышает концентрацию, в то время как после просмотра
-            городских пейзажей она наоборот понижается. Можно совместить
-            прогулку с физическими упражнениями или бегом — так в мозг поступит
-            ещё больше кислорода и он будет лучше работать. Но и&nbsp; простая
-            двадцатиминутная прогулка — тоже отличный вариант.
+            <a
+              href="https://www.sciencedirect.com/science/article/abs/pii/S0272494415000328"
+              target="_blank"
+              class="card__text-link"
+              >показал</a
+            >, что созерцание природы повышает концентрацию, в то время как
+            после просмотра городских пейзажей она наоборот понижается. Можно
+            совместить прогулку с физическими упражнениями или бегом — так в
+            мозг поступит ещё больше кислорода и он будет лучше работать. Но
+            и&nbsp; простая двадцатиминутная прогулка — тоже отличный вариант.
           </p>
         </article>
         <article class="card">
-          <h3 class="card__title card__title-normal">Хорошо ешьте</h3>
+          <h4 class="card__title card__title-normal">Хорошо ешьте</h4>
           <p class="card__text">
             Мы — не ваша бабушка, но это правда важно. Выбирайте продукты,
             которые препятствуют резким скачкам сахара в крови. Например, с
@@ -176,7 +185,7 @@
           </p>
         </article>
         <article class="card">
-          <h3 class="card__title card__title-normal">Читайте</h3>
+          <h4 class="card__title card__title-normal">Читайте</h4>
           <p class="card__text">
             Настоящие бумажные книги. Это правда помогает с концентрацией: чтобы
             прочитать пост в соцсети, достаточно нескольких минут или даже
@@ -218,11 +227,11 @@
           class="gallery__image"
         />
       </section>
-      <footer class="footer">
-        <span class="corner right-top-corner"></span>
-        <span class="corner left-bottom-corner"></span>
-        <div class="footer__text">focus</div>
-      </footer>
     </main>
+    <footer class="footer">
+      <div class="corner right-top-corner"></div>
+      <div class="corner left-bottom-corner"></div>
+      <h2 class="footer__text">focus</h2>
+    </footer>
   </body>
 </html>

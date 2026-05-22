@@ -20,6 +20,10 @@
   --color-menu: #353430;
 }
 
+:root.theme-light .header__rec-label {
+  display: none;
+}
+
 @media(prefers-color-scheme: light) {
   :root {
     --main-bg-img: url("../images/cover-image-light.png");
@@ -32,4 +36,9 @@
     --color-card-text: #353430;
     --color-menu: #353430;
   }
+
+  :root.theme-light .header__rec-label {
+    display: none;
+  }
+
 }
