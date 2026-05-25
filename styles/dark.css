@@ -14,8 +14,9 @@
   --color-primary-heading: #DB00FF;
   --accent-color: #FF0070;
   --title-decor: #FF0070;
-  --color-secondary-heading: #000028;
+  --color-card-heading: #000028;
   --color-section-heading: #FF0070;
   --color-card-text: #F1B2CE;
   --color-menu: #FF0070;
+  --color-corner: var(--color-menu);
 }

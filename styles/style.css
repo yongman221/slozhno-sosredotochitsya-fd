@@ -100,15 +100,15 @@
 .corner.right-top-corner {
   top: 10px;
   right: 10px;
-  border-right: 1px solid var(--accent-color);
-  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--color-corner);
+  border-top: 1px solid var(--color-corner);
 }
 
 .corner.left-bottom-corner {
   bottom: 10px;
   left: 10px;
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--color-corner);
+  border-left: 1px solid var(--color-corner);
 }
 
 .header__rec-label {
@@ -212,7 +212,7 @@
 .gallery {
   display: grid;
   gap: 10px;
-  margin-bottom: 22px;
+  margin-bottom: 46px;
 }
 
 .gallery__title {

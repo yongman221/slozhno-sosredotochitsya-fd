@@ -18,6 +18,7 @@
   --color-section-heading: #353430;
   --color-card-text: #353430;
   --color-menu: #353430;
+  --color-corner: var(--color-menu);
 }
 
 :root.theme-light .header__rec-label {
@@ -35,6 +36,7 @@
     --color-section-heading: #353430;
     --color-card-text: #353430;
     --color-menu: #353430;
+    --color-corner: var(--color-menu);
   }
 
   :root.theme-light .header__rec-label {
