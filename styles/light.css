@@ -39,7 +39,8 @@
     --color-corner: var(--color-menu);
   }
 
-  :root.theme-light .header__rec-label {
+  :root:not(.theme-dark) .header__rec-label {
+    /*сооори :(*/
     display: none;
   }
 
